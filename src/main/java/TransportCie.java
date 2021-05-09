@@ -49,7 +49,7 @@ public class TransportCie extends Delivery implements DaysCalculation
 
     public void setActualDeliveryDate()
     {
-        if (express(1, true, "PostNL"))
+        if (express(countryNumberSupplier, expressDelivery, nameTransportCie))
         {
             super.finalDeliveryDate = (addDaysToDate(super.orderDate,1));
         }
