@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class TransportCieTestMCD
+public class TransportCieTestMCC
 {
     /**
      * Method to determine standard delivery times based on standard Boolean countrySupplier number 1 through 10 or 11 and higher,
