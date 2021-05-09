@@ -8,11 +8,11 @@ import java.util.Scanner;
 public  class Delivery implements DaysCalculation
 {
 
-    private final String orderDate;
+    protected String orderDate;
     private String date;
     protected String finalDeliveryDate;
-    private Integer countryNumberSupplier;
-    private String nameTransportCie;
+    protected Integer countryNumberSupplier;
+    protected String nameTransportCie;
 
     /**
      * input of order details
