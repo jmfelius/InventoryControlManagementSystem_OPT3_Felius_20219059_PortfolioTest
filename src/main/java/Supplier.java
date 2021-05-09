@@ -11,11 +11,12 @@ public class Supplier extends Delivery
      */
     public Supplier(String orderDate, Integer countryNumber)
     {
-
+        super(orderDate);
+        this.countryNumber = countryNumber;
     }
 
-    public String getCountry()
+    public Integer getCountry()
     {
-
+    return countryNumber;
     }
 }

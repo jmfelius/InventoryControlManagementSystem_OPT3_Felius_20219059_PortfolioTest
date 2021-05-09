@@ -18,7 +18,8 @@ public ProductOrder(Customer customer, Product product, String orderDate)
 
 public int getTotalActualDeliveryTime()
 {
-    //to be further constucted
+    //to be further constructed
+    return 0;
 }
 
 }
