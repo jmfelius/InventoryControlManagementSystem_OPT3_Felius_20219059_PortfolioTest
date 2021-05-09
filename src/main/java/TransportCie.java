@@ -1,5 +1,3 @@
-import org.junit.Assert;
-
 public class TransportCie extends Delivery implements DaysCalculation
 {
     private Boolean expressDelivery = false;
