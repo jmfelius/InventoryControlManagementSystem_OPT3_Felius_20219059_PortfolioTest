@@ -11,7 +11,7 @@ public ArrayList<Delivery> requires;
 /**
  * a constructor is built with arayList and Productorder parameters
  */
-public ProductOrder(Customer customer, Product product, String: "orderDate")
+public ProductOrder(Customer customer, Product product, String orderDate)
 {
     this.requires = new ArrayList<>();
 }
@@ -19,8 +19,6 @@ public ProductOrder(Customer customer, Product product, String: "orderDate")
 public int getTotalActualDeliveryTime()
 {
     //to be further constucted
-    int totalActualDeliveryTime;
-    return totalActualDeliveryTime;
 }
 
 }
