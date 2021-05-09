@@ -3,9 +3,9 @@ import org.junit.Assert;
 public class TransportCie extends Delivery implements DaysCalculation
 {
     private Boolean expressDelivery = false;
-    private String date;
+    //private String date;
     private String nameTransportCie;
-    private String orderDate;
+    //private String orderDate;
     private Integer countryNumberSupplier;
 
     /**
@@ -16,10 +16,11 @@ public class TransportCie extends Delivery implements DaysCalculation
      */
     public TransportCie(String orderDate, Integer countryNumberSupplier, String nameTransportCie)
     {
-        super(orderDate,countryNumberSupplier,nameTransportCie);
-        this.orderDate = orderDate;
-        this.countryNumberSupplier = countryNumberSupplier;
-        this.nameTransportCie = nameTransportCie;
+        super(orderDate, countryNumberSupplier, nameTransportCie);
+
+        super.orderDate = orderDate;
+        super.countryNumberSupplier = countryNumberSupplier;
+        super.nameTransportCie = nameTransportCie;
     }
 
     /**
@@ -40,7 +41,7 @@ public class TransportCie extends Delivery implements DaysCalculation
 
     public void expressDelivery(Boolean expressDelivery)
     {
-
+        this.expressDelivery = expressDelivery;
     }
 
     public Boolean express (Integer countryNumberSupplier, Boolean expressDelivery, String nameTransportCie)
@@ -50,6 +51,14 @@ public class TransportCie extends Delivery implements DaysCalculation
 
     public void setActualDeliveryDate()
     {
+        if (express(1, true, "PostNL"))
+        {
+            super.finalDeliveryDate = (addDaysToDate(super.orderDate,1));
+        }
+        else
+        {
+            super.finalDeliveryDate = (addDaysToDate(super.orderDate, 3));
+        }
 
     }
 
