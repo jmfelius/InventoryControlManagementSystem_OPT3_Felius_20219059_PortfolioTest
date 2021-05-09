@@ -13,6 +13,7 @@ public  class Delivery implements DaysCalculation
     protected String finalDeliveryDate;
     protected Integer countryNumberSupplier;
     protected String nameTransportCie;
+    protected Integer productWeight;
 
     /**
      * input of order details
@@ -28,6 +29,14 @@ public  class Delivery implements DaysCalculation
         this.orderDate = orderDate;
         this.countryNumberSupplier = countryNumberSupplier;
         this.nameTransportCie = nameTransportCie;
+    }
+
+    public Delivery(String orderDate, Integer countryNumberSupplier, String nameTransportCie, Integer productWeight)
+    {
+        this.orderDate = orderDate;
+        this.countryNumberSupplier = countryNumberSupplier;
+        this.nameTransportCie = nameTransportCie;
+        this.productWeight = productWeight;
     }
 
     /**
