@@ -1,3 +1,5 @@
+import org.junit.Assert;
+
 public class TransportCie extends Delivery implements DaysCalculation
 {
     private Boolean expressDelivery = false;
@@ -41,9 +43,9 @@ public class TransportCie extends Delivery implements DaysCalculation
 
     }
 
-    public Boolean express (String countrySupplier, Boolean expressDelivery, String nameTransportCie)
+    public Boolean express (Integer countryNumberSupplier, Boolean expressDelivery, String nameTransportCie)
     {
-
+       return (((countryNumberSupplier >=1 & countryNumberSupplier <= 10) || (expressDelivery == true)) & nameTransportCie.equals("PostNL"));
     }
 
     public void setActualDeliveryDate()

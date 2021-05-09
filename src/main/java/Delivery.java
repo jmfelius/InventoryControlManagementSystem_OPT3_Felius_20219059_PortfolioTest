@@ -45,8 +45,19 @@ public  class Delivery implements DaysCalculation
      */
     public void updateExpectedDeliveryDate (String today)
     {
-
+        int deltaDays = (int) getDifferenceDays(date, today );
+        if (deltaDays < 0)
+        {
+            Scanner newDate = new Scanner(System.in);
+            System.out.print("Please insert new expected delivery date (dd-MM-yyyy): ");
+            this.date = newDate.nextLine();
+        }
+        else
+        {
+            System.out.printf("Please be patient; still %d days before the expected delivery day lapses.", deltaDays);
+        }
     }
+
 
     /**
      * When the supplier/transportcie has delivered the order to the next chain (i.e.
@@ -64,7 +75,14 @@ public  class Delivery implements DaysCalculation
      */
     public String getExpectedDeliveryDate()
     {
-
+        try {
+            int deltaDays = (int) getDifferenceDays(date, finalDeliveryDate);
+            if (deltaDays < 0) {
+                return ("The product has already been delivered on " + finalDeliveryDate);
+            }
+        }
+        catch(Exception e){}
+        return date;
     }
 
     /**
@@ -83,6 +101,6 @@ public  class Delivery implements DaysCalculation
      */
     public long getActualDeliveryTime()
     {
-
+        return getDifferenceDays(orderDate,getActualDeliveryDate());
     }
 }
